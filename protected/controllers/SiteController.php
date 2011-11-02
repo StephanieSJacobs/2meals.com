@@ -10,6 +10,6 @@ class SiteController extends CController
 	 */
 	public function actionIndex()
 	{
-		echo 'Hello World! Powered by yii framework.';
+		echo 'Hello World!';
 	}
 }
