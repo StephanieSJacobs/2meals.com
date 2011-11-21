@@ -11,7 +11,7 @@
    HTML5 element display
    ========================================================================== */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, inside { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 
 
@@ -49,8 +49,8 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
    Links
    ========================================================================== */
 
-a { color: white;}
-a:visited { color: white; }
+a { color: #00e; }
+a:visited { color: #551a8b; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
@@ -221,12 +221,9 @@ body{
 }
 
 #header-container{
-	background-image:url('2mealsicon.png');
-	background-repeat: no-repeat;
-	background-position:center;
-	background-color: #DBDBDB;
-	height:250px;
-	border-bottom:20px solid #800000;
+	background-color:#99cc66;
+	height:130px;
+	border-bottom:20px solid #ccff66;
 	margin-bottom:50px;
 	-webkit-box-shadow:0 40px 40px -40px #AAA;
 	   -moz-box-shadow:0 40px 40px -40px #AAA;
@@ -234,33 +231,19 @@ body{
 }
 
 h2, h3{margin:30px 0;}
-h2{font-size: 30px;}
-h3{font-size: 20px;}
-#title, h2, h3{font-weight:normal;}
+h2{font-size: 40px;}
+h3{font-size: 30px;}
+#mtitle, h2, h3{font-weight:normal;}
 
-#title{
+#mtitle{
 	font-size: 60px;
-	width: auto;
-	height: 100px;
-	/*background-image:url('Simple.png'); */
-	
 	color:white;
 	float:left;
-	margin-top: 10px;
 }
-
-#title2{
-	margin-top: 100px;
-	font-size: 20px;
-	color: rgb(0,100,120);
-	float:left;
-}
-
 
 header nav{
 	float:right;
-	margin-top:200px;
-	margin-right:20px;
+	margin-top:100px;
 }
 
 header nav ul li{
@@ -268,106 +251,44 @@ header nav ul li{
 }
 
 nav a{
-
-	padding-top: 10px;
-	padding-left:10px;
-	padding-right:10px;
-	padding-bottom: 10px;
-	font-size: 14px;
-	font-style: bold;
+	padding:20px;
 	color:white;
 	text-decoration:none;
-	background-color:#800000;
-	-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-			border-radius:	5px;
-
+	background-color:#ccff66;   
 }
 
 aside{
-	font-size: 30px;
-	color: white;
+	color:white;
 	padding:20px;
 	float:right;
-	height:500px;
-	width:180px;
-	/*background-image:url('neucastle.png');*/
-	background-color: #800000;
-	/*border-bottom:20px solid #627383;*/
-	/*margin-bottom:50px;*/
+	height:1000px;
+	width:300px;
+	background-color:#99cc66;
+	border-bottom:20px solid #ccff66;
+	margin-bottom:50px;
 	-webkit-box-shadow:0 0px 40px -10px #AAA;
 	   -moz-box-shadow:0 0px 40px -10px #AAA;
 	        box-shadow:0 0px 40px -10px #AAA;
-	 -webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-			 border-radius: 5px;
-}
-survey{
-	font-size: 30px;
-	color: white;
-	padding:20px;
-	float:right;
-	height:500px;
-	width:180px;
-	background-color: #BEC3C3;
-	/*border-bottom:20px solid #627383;*/
-	/*margin-bottom:50px;*/
-	-webkit-box-shadow:0 0px 40px -10px #AAA;
-	   -moz-box-shadow:0 0px 40px -10px #AAA;
-	        box-shadow:0 0px 40px -10px #AAA;
-	 -webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-			 border-radius: 5px;
 }
 
 #main p{
 	font:16px/26px Helvetica, Helvetica Neue, Arial;
 	width:620px;
-	 -webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-			 border-radius: 5px;
 }
 
 article header{
-	color: gray;
-	outline:gray;
-	margin-bottom:20px;
+	margin-bottom:50px;
 	padding-bottom:30px;
 	width:700px;
-	/*-webkit-box-shadow:0 45px 60px -60px #AAA;
+	-webkit-box-shadow:0 45px 60px -60px #AAA;
 	   -moz-box-shadow:0 45px 60px -60px #AAA;
-	        box-shadow:0 45px 60px -60px #AAA;*/
-}
-
-article inside{
-	background-color: #DBDBDB;
-	text-align: center;
-	padding-top: -10px;
-	padding-left: 10px;
-	margin-bottom: 20px;
-	padding-bottom: 5px;
-	width:680px;
-	border-style: outset;
-	border-color: #627383;
-	border-width: 3px;
-	-webkit-box-shadow:0 0px 40px -10px #AAA;
-	   -moz-box-shadow:0 0px 40px -10px #AAA;
-	        box-shadow:0 0px 40px -10px #AAA;
-	-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-			 border-radius: 5px;
-	
-}
-article inside h3{
-	background-color: #800000;
-	width:680px;
-	color:white;
+	        box-shadow:0 45px 60px -60px #AAA;
 }
 
 #footer-container{
-	background-color:#A5A58E;
+	background-color:#99cc66;
 	height:240px;
-	border-top:20px solid #800000;
+	border-top:20px solid #ccff66;
 	margin-top:50px;
 	-webkit-box-shadow:0 -40px 40px -40px #AAA;
 	   -moz-box-shadow:0 -40px 40px -40px #AAA;
@@ -449,20 +370,99 @@ article inside h3{
   h2, h3{ page-break-after: avoid; }
 }
 
+/* Custom CSS */
 
-/*Slide Show */
+#shopbag {float:right;
+padding: 50px;}
 
-
-#dev7link {
-    position:absolute;
-    top:0;
-    left:50px;
-    background:url(images/dev7logo.png) no-repeat;
-    width:60px;
-    height:67px;
-    border:0;
-    display:block;
-    text-indent:-9999px;
+/*
+ * jQuery Nivo Slider v2.6
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010
+ */
+ 
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
 }
 
 .theme-default #slider {
@@ -474,27 +474,3 @@ article inside h3{
 .theme-orman.slider-wrapper {
     margin-top:150px;
 }
-
-/*====================*/
-/*=== Other Styles ===*/
-/*====================*/
-.clear {
-	clear:both;
-}
-
-/* end slide show*/
-
-/*Guest List*/
-comments h1, comments h2, comments h3						{ font: 28px Georgia, Serif; border-bottom: 1px dotted #ccc;
-								  margin: 0 0 10px 0; }
-
-#page-wrap						{ width: 500px; margin: 50px auto; padding: 20px; background-color: #DBDBDB; }
-
-.clear							{ clear: both; }
-input[type="text"], textarea	{ padding: 3px; border: 1px solid #666; width: 350px;
-								  margin: 0 0 15px 0; }
-input[type="text"]				{ font: 28px Georgia, Serif; }
-textarea						{ height: 100px; font: 12px "Lucida Grande", Sans-Serif; }
-label							{ background: #666; color: black; width:200 px; height; 50px;}
-
-.post							{ margin: 0 0 20px 0; }
