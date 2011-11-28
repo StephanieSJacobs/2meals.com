@@ -72,17 +72,21 @@ $this->breadcrumbs=array(
 			   This will depend on your website implementation, and you should add your own
 			   code here. The user profile is in $auth_info.
 			*/
-            //Yii::app()->user->login($identifier);
-            //Yii::app()->user->name($provider);
 			
-			//Yii::app()->user->login($identifier,1800); //session is 30 minutes long
+			$identity=new UserIdentity($username,'temp');
+			$identity->authenticate();
 			
-			$identity=new UserIdentity($username,'1234');
-			
-			Yii::app()->user->login($identity,1800); //session timeout is 30 minutes
-			
-			$this->redirect(Yii::app()->user->returnUrl);
-			
+			if ($identity->errorCode===UserIdentity::ERROR_USERNAME_INVALID)
+			{
+				Yii::app()->user->setState('isToken',true,false); //sets session variable 'isToken' to true, if set to false variable is removed.
+				Yii::app()->user->setState('tokenUsername',$username,'remove'); //sets session variable 'isToken' to true, if set to false variable is removed.
+				$this->redirect(Yii::app()->createUrl('site/register'));
+			}
+			else
+			{
+				Yii::app()->user->login($identity,3600/2); //session timeout is a half hour
+				$this->redirect(Yii::app()->createUrl('site/profile'));
+			}			
 
 		} else {
 		  // Gracefully handle auth_info error.  Hook this into your native error handling system.

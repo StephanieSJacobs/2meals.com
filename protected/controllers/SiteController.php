@@ -86,13 +86,29 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+				$this->redirect(Yii::app()->createUrl('site/profile'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
-		      
+	}
+	
+	/**
+	 * Displays the registration page
+	 */
+	public function actionRegister()
+	{
+		$model=new RegisterForm;
+
+		// collect user input data
+		if(isset($_POST['RegisterForm']))
+		{
+			$model->attributes=$_POST['RegisterForm'];
+			// save user input in db and login, then redirect to the profile page
+			if($model->register() && $model->login())
+				$this->redirect(Yii::app()->createUrl('site/profile')); //change this to profile page once created
+		}
 		// display the login form
-		//$this->render('login',array());
+		$this->render('register',array('model'=>$model));
 	}
 
 	/**
@@ -106,8 +122,69 @@ class SiteController extends Controller
 	
 	public function actionToken()
 	{
-		// display the login form
+		/** 
+		* render the token page
+		* the token form collects the openID token via CURL,
+		* validates the user, logs them in
+		* then redirects to the profile page
+		* is user is not in system, they are redirected to register page
+		*/
 		$this->render('token',array());
 		
 	}
+	
+	public function actionProfile()
+	{
+		$this->render('profile',array());
+	}
+
+	//May not need functions below
+	
+	/**
+	 * Returns user records.
+	 * @return the user record
+	 * @soap
+	 */
+	/*public function getUser($User)
+	{
+		return Users::model()->findByPk($User->id);
+	}*/
+
+	/**
+	 * Updates or inserts a user.
+	 * If the ID is null, an insertion will be performed;
+	 * Otherwise it updates the existing one.
+	 * @param User user model
+	 * @return boolean whether saving is successful
+	 */
+	/*public function saveUser($User)
+	{
+		if($User->id > 0) // update
+		{
+			$User->isNewRecord=false;
+			if(($oldUser=Users::model()->findByPk($User->id))!==null)
+			{
+				$oldUser->attributes=$User->attributes;
+				return $oldUser->save();
+			}
+			else
+				return false;
+		}
+		else // insert
+		{
+			$User->isNewRecord=true;
+			$User->id=null;
+			return $User->save();
+		}
+	}*/
+
+	/**
+	 * Deletes the specified user record.
+	 * @param integer ID of the user to be deleted
+	 * @return integer number of records deleted
+	 */
+	/*public function deleteContact($id)
+	{
+		return Users::model()->deleteByPk($id);
+	}*/
 }

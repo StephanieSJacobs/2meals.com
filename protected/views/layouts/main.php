@@ -63,7 +63,7 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home Page', 'url'=>array('/site/index')),
-				array('label'=>'Profile Page', 'url'=>array('/site/index')),
+				array('label'=>'Profile Page', 'url'=>array('/site/profile')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'About Us', 'url'=>array('/site/page', 'view'=>'about')),
