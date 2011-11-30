@@ -1,7 +1,7 @@
 <?php
-$this->pageTitle=Yii::app()->name . ' - About';
+$this->pageTitle=Yii::app()->name . ' - Congratulations';
 $this->breadcrumbs=array(
-	'About',
+	'Congratulations',
 );
 ?>
 <script type="text/javascript">
