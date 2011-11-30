@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta property="og:title" content="2meals.com"/>
-		<meta property="og:image" content="<?php echo CHtml::image(Yii::app() -> request -> baseUrl;?>/images/2mealsicon.png"/>
-		<meta property="og:description" content="Help feed some hungry people today!"/>
+		<meta property="og:image" content="2mealsicon.png"/>
+		<meta property="og:description" content="So-and-so helped feed some hungry people today!"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="language" content="en" />
 		<link rel="shortcut icon" href="<?php echo Yii::app() -> request -> baseUrl;?>/favicon.ico" type="image/x-icon" />
@@ -77,7 +77,7 @@ janrain.settings.tokenUrl = "<?php echo Yii::app() -> createAbsoluteUrl('site/to
 				</div>
 			</div><!-- header -->
 			<div id="mainmenu">
-				<?php $this -> widget('zii.widgets.CMenu', array('items' => array( array('label' => 'Home Page', 'url' => array('/site/index')), array('label' => 'Profile Page', 'url' => array('/site/profile')), array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app() -> user -> isGuest), array('label' => 'Logout (' . Yii::app() -> user -> name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app() -> user -> isGuest), array('label' => 'Congratulations', 'url' => array('/site/page', 'view' => 'about')), array('label' => 'Contact Us', 'url' => array('/site/contact'))), ));?>
+				<?php $this -> widget('zii.widgets.CMenu', array('items' => array( array('label' => 'Home Page', 'url' => array('/site/index')), array('label' => 'Profile Page', 'url' => array('/site/profile')), array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app() -> user -> isGuest), array('label' => 'Logout (' . Yii::app() -> user -> name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app() -> user -> isGuest), array('label' => 'About Us', 'url' => array('/site/page', 'view' => 'about')), array('label' => 'Contact Us', 'url' => array('/site/contact'))), ));?>
 			</div><!-- mainmenu -->
 			<?php if(isset($this->breadcrumbs)):
 			?>
