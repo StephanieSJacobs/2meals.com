@@ -13,13 +13,13 @@
 /* The Nivo Slider styles */
 .nivoSlider {
 	position:relative;
-	width:620px;
-	height:250px;
 }
 .nivoSlider img {
 	position:absolute;
 	top:0px;
 	left:0px;
+	height:250px;
+	width:800px;
 }
 /* If an image is wrapped in a link */
 .nivoSlider a.nivo-imageLink {
