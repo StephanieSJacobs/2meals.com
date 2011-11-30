@@ -1,9 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-		<meta property="og:title" content="2meals.com"/>
-		<meta property="og:image" content="2mealsicon.png"/>
-		<meta property="og:description" content="So-and-so helped feed some hungry people today!"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="language" content="en" />
 		<link rel="shortcut icon" href="<?php echo Yii::app() -> request -> baseUrl;?>/favicon.ico" type="image/x-icon" />
