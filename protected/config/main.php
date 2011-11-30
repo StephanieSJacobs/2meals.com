@@ -52,8 +52,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=2meals', //is the host supposed to be localhost?
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => '2meals',
+			'password' => 'f33d@merica',
 			'charset' => 'utf8',
 		),
 		
