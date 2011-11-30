@@ -16,13 +16,30 @@
 		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app() -> request -> baseUrl;?>/css/main.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app() -> request -> baseUrl;?>/css/form.css" />
+		<!--Google+ button Javascript-->
+		<script type="text/javascript">
+			window.___gcfg = {
+				lang : 'en-US'
+			};
+			(function() {
+				var po = document.createElement('script');
+				po.type = 'text/javascript';
+				po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(po, s);
+			})();
+
+		</script>
+		<!--Twitter Follow Button Javascript-->
+		<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			(function() {
 if (typeof window.janrain !== 'object') window.janrain = {};
 window.janrain.settings = {};
 
-janrain.settings.tokenUrl = '<?php echo Yii::app() -> createAbsoluteUrl('site/token');?>
-	';
+janrain.settings.tokenUrl = "<?php echo Yii::app() -> createAbsoluteUrl('site/token');?>
+	";
 
 	function isReady() {
 		janrain.ready = true;
@@ -66,13 +83,25 @@ janrain.settings.tokenUrl = '<?php echo Yii::app() -> createAbsoluteUrl('site/to
 			<?php endif?>
 
 			<?php echo $content;?>
-
 			<div id="footer">
 				Copyright &copy; 2011 by 2Meals.
 				<br/>
 				All Rights Reserved.
 				<br/>
-				<?php echo Yii::powered();?>
+				<div id="follow_btns_box">
+					<div id="followTxt">
+						Follow us:
+					</div>
+					<div id="like_btn">
+						<iframe src="http://www.facebook.com/plugins/like.php?href=https://www.2meals.com/" scrolling="no" frameborder="0" style="height: 50px"></iframe>
+					</div>
+					<div id="google_plus_follow_btn">
+						<g:plusone annotation="none"></g:plusone>
+					</div>
+					<div id="twitter_follow_btn">
+						<a href="https://twitter.com/2meals" class="twitter-follow-button">Follow @2meals</a>
+					</div>
+				</div>
 			</div><!-- footer -->
 		</div><!-- page -->
 	</body>
