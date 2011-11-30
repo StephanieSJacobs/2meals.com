@@ -20,8 +20,7 @@
 		<script type="text/javascript">
 			window.___gcfg = {
 				lang : 'en-US'
-			};
-			(function() {
+			}; (function() {
 				var po = document.createElement('script');
 				po.type = 'text/javascript';
 				po.async = true;
@@ -92,14 +91,15 @@ janrain.settings.tokenUrl = "<?php echo Yii::app() -> createAbsoluteUrl('site/to
 					<div id="followTxt">
 						Follow us:
 					</div>
-					<div id="like_btn">
-						<iframe src="http://www.facebook.com/plugins/like.php?href=https://www.2meals.com/" scrolling="no" frameborder="0" style="height: 50px"></iframe>
-					</div>
 					<div id="google_plus_follow_btn">
 						<g:plusone annotation="none"></g:plusone>
 					</div>
 					<div id="twitter_follow_btn">
 						<a href="https://twitter.com/2meals" class="twitter-follow-button">Follow @2meals</a>
+					</div>
+					<br/>
+					<div id="like_btn">
+						<iframe src="http://www.facebook.com/plugins/like.php?href=https://www.2meals.com/" scrolling="no" frameborder="0" style="border: none;"></iframe>
 					</div>
 				</div>
 			</div><!-- footer -->
